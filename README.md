@@ -57,3 +57,15 @@ If you find our work useful in your research, please consider citing:
   publisher={Elsevier}
 }
 ```
+```
+@article{xiu2020collapsed,
+  title={Collapsed building detection using 3d point clouds and deep learning},
+  author={Xiu, Haoyi and Shinohara, Takayuki and Matsuoka, Masashi and Inoguchi, Munenari and Kawabe, Ken and Horie, Kei},
+  journal={Remote Sensing},
+  volume={12},
+  number={24},
+  pages={4057},
+  year={2020},
+  publisher={MDPI}
+}
+```
