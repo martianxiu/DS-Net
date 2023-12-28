@@ -26,7 +26,9 @@ The code is tested using Python 3.11 and CUDA 11.8.
 - python3 setup.py install
 
 ## Dataset
-Download the dataset from [here](https://drive.google.com/file/d/14RKHsmBdTRNrecDXCDgprgmaC6wRrGyL/view?usp=sharing) and put it under the ```dataset```.
+Download the dataset from [here](https://drive.google.com/file/d/14RKHsmBdTRNrecDXCDgprgmaC6wRrGyL/view?usp=sharing) and put it under the ```dataset```. 
+
+Please check [here](https://github.com/martianxiu/DS-Net/tree/main/dataset) for the details about the dataset. 
 
 ## Training
 To train the DS-Net: 
