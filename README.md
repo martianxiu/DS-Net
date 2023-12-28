@@ -25,8 +25,8 @@ The code is tested using Python 3.11 and CUDA 11.8.
 - cd scripts/lib/pointops
 - python3 setup.py install
 
-## Datasets
-You can download the dataset from [here](https://drive.google.com/file/d/14RKHsmBdTRNrecDXCDgprgmaC6wRrGyL/view?usp=sharing). 
+## Dataset
+Download the dataset from [here](https://drive.google.com/file/d/14RKHsmBdTRNrecDXCDgprgmaC6wRrGyL/view?usp=sharing) and put it under the ```dataset```.
 
 ## Training
 To train the DS-Net: 
