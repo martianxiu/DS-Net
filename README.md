@@ -25,8 +25,8 @@ The code is tested using Python 3.11 and CUDA 11.8.
 - cd scripts/lib/pointops
 - python3 setup.py install
 
-## Datasets
-You can download the dataset from [here](https://drive.google.com/file/d/14RKHsmBdTRNrecDXCDgprgmaC6wRrGyL/view?usp=sharing). 
+## Dataset
+Download the dataset from [here](https://drive.google.com/file/d/14RKHsmBdTRNrecDXCDgprgmaC6wRrGyL/view?usp=sharing) and put it under the ```dataset```.
 
 ## Training
 To train the DS-Net: 
@@ -55,5 +55,17 @@ If you find our work useful in your research, please consider citing:
   pages={103150},
   year={2023},
   publisher={Elsevier}
+}
+```
+```
+@article{xiu2020collapsed,
+  title={Collapsed building detection using 3d point clouds and deep learning},
+  author={Xiu, Haoyi and Shinohara, Takayuki and Matsuoka, Masashi and Inoguchi, Munenari and Kawabe, Ken and Horie, Kei},
+  journal={Remote Sensing},
+  volume={12},
+  number={24},
+  pages={4057},
+  year={2020},
+  publisher={MDPI}
 }
 ```
