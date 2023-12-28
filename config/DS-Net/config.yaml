@@ -1,0 +1,83 @@
+DATA:
+  data_name: dd 
+  with_intensity: False 
+  d_in_initial: 0 # feat dim
+  d_out_initial: 128 # out dim of first layer
+  num_classes: 3 
+  strides: [2, 2, 2]
+  nsample_conv: 12 
+  nsample: 12
+  class_weight: True 
+  train_split: trainval
+  val_split: test 
+  test_split: test 
+
+Model:
+  architecture: [ 
+    'simple_with_unit',
+    'residual_with_unit_before_restoration',
+    'downsample',
+    'residual_with_unit_before_restoration',
+    'downsample',
+    'residual_with_unit_before_restoration',
+    'downsample',
+    'residual_with_unit_before_restoration',
+    'upsample',
+    'laplacian_unit',
+    'upsample',
+    'laplacian_unit',
+    'upsample',
+    'laplacian_unit',
+  ]
+
+  convolution: 'pointnet2_expand'
+  decoder_out_dim: 128 
+  bottleneck_ratio: 2 
+  expansion_rate: 1 
+  with_unit: False 
+  unit_name: 'laplacian_unit'
+  use_xyz: True
+
+TRAIN:
+  arch: 'scene_seg_net' 
+  aug: 'rot_scale_shift'
+  sync_bn: False
+  ignore_label: 255
+  label_smoothing: 0.0 
+  train_gpu: [0]
+  workers: 10  # data loader workers
+  batch_size: 16 # batch size for training
+  batch_size_val: 16 # batch size for validation during training, memory and speed tradeoff
+  base_lr: 0.1
+  epochs: 150 
+  start_epoch: 0
+  step_epoch: 30
+  multiplier: 0.1
+  momentum: 0.9
+  weight_decay: 0.0001
+  drop_rate: 0.5
+  manual_seed: 
+  print_freq: 30 
+  save_freq: 1
+  save_path:
+  weight:  # path to initial weight (default: none)
+  resume:  # path to latest checkpoint (default: none)
+  evaluate: True  # evaluate on validation set, extra gpu memory needed and small batch_size_val is recommend
+  eval_freq: 1
+Distributed:
+  dist_url: tcp://localhost:8888
+  dist_backend: 'nccl'
+  multiprocessing_distributed: False 
+  world_size: 1
+  rank: 0
+
+TEST:
+  test_list: 
+  test_list_full: 
+  split: val  # split in [train, val and test]
+  test_gpu: [0]
+  test_workers: 4
+  batch_size_test: 4
+  model_path:
+  save_folder:
+  names_path: 
