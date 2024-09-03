@@ -10,6 +10,8 @@ Collapsed buildings should be detected immediately after earthquakes for humanit
 ## Paper
 You can download our paper from [here](https://www.sciencedirect.com/science/article/pii/S1569843222003387). 
 
+More comprehensive explanations and experiments can be found in the first author's [Thesis](https://t2r2.star.titech.ac.jp/rrws/file/CTT100885768/ATD100000413/).
+
 ## Setup
 The code is tested using Python 3.11 and CUDA 11.8. 
 
